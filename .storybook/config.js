@@ -1,8 +1,16 @@
-import { configure } from '@storybook/react';
+import { configure, addParameters } from '@storybook/react';
+import { themes } from '@storybook/theming';
 
+const req = require.context('../src/', true, /stories\.js$/)
 function loadStories() {
-  require('../stories/index.js');
-  // You can require as many stories as you need.
+  req.keys().forEach(req)
 }
+
+
+// addParameters({
+//   options: {
+//     theme: themes.dark,
+//   },
+// });
 
 configure(loadStories, module);
