@@ -15,7 +15,7 @@ addDecorator(addReadme);
 
 
 storiesOf('Widgits', module)
-storiesOf('Widgits.IntelligenceReports', module)
+storiesOf('Widgits.Map', module)
   .addDecorator(withKnobs)
   .addDecorator((storyFn, context) => withConsole()(storyFn)(context))
   .addParameters({
@@ -25,5 +25,3 @@ storiesOf('Widgits.IntelligenceReports', module)
     },
   })
   .addWithJSX('with data', () => <Button />)
-  .addWithJSX('loading', () => <Button />)
-  .addWithJSX('no data', () => <Button />);

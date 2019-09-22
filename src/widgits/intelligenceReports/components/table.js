@@ -24,7 +24,8 @@ const IRTable = ({ rows, classes }) => {
         <TableBody>
             {rows.map((row,i) => (
             <TableRow key={row.name} key={i}>
-                <TableCell component="th" scope="row" style={getCellBgColor(row.num)} className='notifications-cell'>
+                <TableCell component="th" scope="row" style={getCellBgColor(row.num)} className='notifications-cell'
+                onClick={()=>console.log(`You clicked ${row.num}`)}>
                 {row.num}
                 </TableCell>
                 <TableCell align="left">
